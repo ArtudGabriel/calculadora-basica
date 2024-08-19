@@ -1,0 +1,80 @@
+:root {
+    --cor-de-fundo: rgb(132, 165, 170);
+    --cor-botao: rgb(149, 193, 201);
+    --cor-botao-igual: rgb(255, 166, 0);
+    --contorno: 0.1rem solid rgb(58, 58, 58);
+    --cor-tela: rgb(182, 215, 221);
+    --fonte: "Noto Sans Mono", monospace;
+    --cor-botao-hover: rgb(164, 214, 224);
+    --cor-botao-active: rgb(164, 201, 207);
+    --cor-igual-hover: rgb(253, 174, 28);
+    --cor-igual-active: rgb(220, 165, 61);
+}
+
+* {
+    /* margin: 0; */
+    font-family: var(--fonte);
+    user-select: none;
+}
+
+.calculadora {
+    background-color: var(--cor-de-fundo);
+    font-size: 3rem;
+    padding-bottom: 0.7rem;
+    padding-top: 0.7rem;
+    border: 0.15rem solid rgb(36, 70, 76);
+    border-radius: 0.2rem;
+}
+
+.tela {
+    display: flex;
+    justify-content: end;
+    margin: 0 0.28rem;
+    padding-right: 0.3rem;
+    background-color: var(--cor-tela);
+    border: var(--contorno);
+    border-radius: 5px;
+    /* box-shadow: 0rem 0.2rem 0.3rem rgba(56, 69, 71, 0.25); */
+}
+
+.botoes {
+    justify-content: center;
+    padding-top: 0.5rem;
+    margin: 0.2rem 0.6rem;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 0.2rem;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-botao);
+    font-weight: 400;
+    font-size: 3rem;
+    padding: 10px 10px;
+    border: var(--contorno);
+    border-radius: 5px;
+    box-shadow: 0rem 0.2rem 0.3rem rgba(56, 69, 71, 0.25);
+}
+
+.igual {
+    background-color: var(--cor-botao-igual);
+}
+
+.botao:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.botao:active {
+    background: var(--cor-botao-clicked);
+}
+
+.igual:hover {
+    background-color: var(--cor-igual-hover);
+}
+
+.igual:active {
+    background-color: var(--cor-igual-active);
+}
+
