@@ -46,6 +46,10 @@
     gap: 0.2rem;
 }
 
+.C{
+    grid-column: 1/5;
+}
+
 .botao {
     display: flex;
     justify-content: center;
@@ -56,6 +60,7 @@
     border: var(--contorno);
     border-radius: 5px;
     box-shadow: 0rem 0.2rem 0.3rem rgba(56, 69, 71, 0.25);
+    cursor: pointer;
 }
 
 .igual {
