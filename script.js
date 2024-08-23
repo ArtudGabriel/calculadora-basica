@@ -6,7 +6,7 @@ document.querySelectorAll('.botao').forEach(botao => {
   botao.addEventListener('click', () => {
     const valor = botao.getAttribute('data-valor');
 
-    if (['+', '-', 'x', '/'].includes(valor)) {
+    if (['+', '-', 'x', '/', '%', '√'].includes(valor)) {
       operador = valor;
       n2 = n1;
       n1 = '';
@@ -17,19 +17,18 @@ document.querySelectorAll('.botao').forEach(botao => {
         operador = null;
         n2 = '';
       }
-    } else if (valor === 'C') {
+    } else if (valor === 'AC') {
       n1 = '';
       n2 = '';
       operador = null;
-    }
-    else {
+    } else {
       n1 += valor;
     }
     atualizarTela();
   });
 });
 
-function calcular(a, b, operador) {
+function calcular(b, a, operador) {
   a = parseFloat(a);
   b = parseFloat(b);
   switch (operador) {
@@ -41,9 +40,17 @@ function calcular(a, b, operador) {
       return a * b;
     case '/':
       return a / b;
+    case '%':
+      return (a * b) / 100;
+    case '√':
+      return Math.sqrt(a);
   }
 }
 
 function atualizarTela() {
-  document.getElementById('tela').innerText = n1 || operador || '0';
+  if (n1 == Infinity) {
+    document.getElementById('tela').innerText = 'Error';
+  } else {
+    document.getElementById('tela').innerText = n1 || operador || '0';
+  }
 }
