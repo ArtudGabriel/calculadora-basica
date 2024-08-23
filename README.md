@@ -4,13 +4,13 @@ Este é um projeto de uma calculadora desenvolvida em HTML, CSS e JavaScript. O 
 
 📋 Índice
 
-1. [🔍 Visão Geral](#-visão-geral)
-2. [🎯 Motivação](#-motivação)
-3. [✨ Funcionalidades](#-funcionalidades)
-4. [🛠️ Como Usar](#️-como-usar)
-5. [💻 Tecnologias Utilizadas](#-tecnologias-utilizadas)
-6. [📚 Aprendizados](#-aprendizados)
-7. [🌐 Acesse o Projeto](#-acesse-o-projeto)
+1. 🔍 Visão Geral
+2. 🎯 Motivação
+3. ✨ Funcionalidades
+4. 🛠️ Como Usar
+5. 💻 Tecnologias Utilizadas
+6. 📚 Aprendizados
+7. 🌐 Acesse o Projeto
 
 🔍 Visão Geral
 
