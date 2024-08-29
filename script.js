@@ -6,7 +6,7 @@ document.querySelectorAll('.botao').forEach(botao => {
   botao.addEventListener('click', () => {
     const valor = botao.getAttribute('data-valor');
 
-    if (['+', '-', 'x', '/', '%', '√'].includes(valor)) {
+    if (['+', '-', 'x', '÷', '%'].includes(valor)) {
       operador = valor;
       n2 = n1;
       n1 = '';
@@ -21,6 +21,11 @@ document.querySelectorAll('.botao').forEach(botao => {
       n1 = '';
       n2 = '';
       operador = null;
+    } else if (valor === '√') {
+      operador = valor;
+      if (n1 && operador) {
+        n1 = calcular(n1, n2, operador);
+      }
     } else {
       n1 += valor;
     }
@@ -28,22 +33,22 @@ document.querySelectorAll('.botao').forEach(botao => {
   });
 });
 
-function calcular(b, a, operador) {
-  a = parseFloat(a);
-  b = parseFloat(b);
+function calcular(n1, n2, operador) {
+  n1 = parseFloat(n1);
+  n2 = parseFloat(n2);
   switch (operador) {
     case '+':
-      return a + b;
+      return n2 + n1;
     case '-':
-      return a - b;
+      return n2 - n1;
     case 'x':
-      return a * b;
-    case '/':
-      return a / b;
+      return n2 * n1;
+    case '÷':
+      return n2 / n1;
     case '%':
-      return (a * b) / 100;
+      return (n2 * n1) / 100;
     case '√':
-      return Math.sqrt(a);
+      return Math.sqrt(n1);
   }
 }
 
