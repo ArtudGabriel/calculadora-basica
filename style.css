@@ -1,5 +1,6 @@
 :root {
     --cor-de-fundo: rgb(132, 165, 170);
+    --cor-texto: rgb(0, 0, 0);
     --cor-botao: rgb(149, 193, 201);
     --cor-botao-igual: rgb(255, 166, 0);
     --contorno: 0.06rem solid rgb(58, 58, 58);
@@ -15,6 +16,7 @@
     /* margin: 0; */
     font-family: var(--fonte);
     user-select: none;
+    text-decoration: none;
 }
 
 .calculadora {
@@ -27,10 +29,13 @@
 }
 
 .tela {
+    text-align: right;
+    word-break: break-word;
     display: flex;
     justify-content: end;
     margin: 0 0.6rem;
     padding-right: 0.3rem;
+    color: var(--cor-texto);
     background-color: var(--cor-tela);
     border: var(--contorno);
     /* border-radius: 5px; */
@@ -50,6 +55,7 @@
     display: flex;
     justify-content: center;
     background-color: var(--cor-botao);
+    color: var(--cor-texto);
     font-weight: 400;
     font-size: 3rem;
     padding: 10px 10px;
